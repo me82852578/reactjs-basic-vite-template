@@ -3,14 +3,9 @@
 
 echo "*****Running unit tests******"
 
-# git stash -q --keep-index
-
 yarn run test --watchAll=false
 
-# status=$?
-
-# git stash pop -q
-
 yarn run pre-commit
+
 exit $status
 

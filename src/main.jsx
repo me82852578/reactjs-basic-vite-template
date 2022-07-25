@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 
 // eslint-disable-next-line no-undef
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = document.getElementById('root')
+ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
