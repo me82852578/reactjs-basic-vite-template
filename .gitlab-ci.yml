@@ -1,0 +1,12 @@
+image: node
+
+stages:
+  - lint
+
+eslint:
+  stage: lint
+  script:
+    # Install modules
+    - yarn
+    # Run lint
+    - yarn lint && npx stylelint '**/*.{scss,css}'
