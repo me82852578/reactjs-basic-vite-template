@@ -1,9 +1,9 @@
 {
   "extends": [
-    "airbnb",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
+    "airbnb",
     "plugin:react/jsx-runtime"
   ],
   "parserOptions": {
@@ -14,6 +14,9 @@
     "react/prop-types": "error",
     "react/require-default-props": "off",
     "semi": "off",
+    "implicit-arrow-linebreak": "off",
+    "comma-dangle": "off",
+    "function-paren-newline": "off",
     "react/jsx-filename-extension": [
       1,
       {
@@ -23,7 +26,7 @@
   },
   "overrides": [
     {
-      "files": ["test/**"],
+      "files": ["**/__test__/**", "**/__mocks/**"],
       "plugins": ["testing-library", "jest"],
       "extends": ["plugin:testing-library/react", "plugin:jest/recommended"],
       "rules": { "jest/prefer-expect-assertions": "off" }
