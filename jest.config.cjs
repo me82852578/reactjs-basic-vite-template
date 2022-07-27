@@ -1,6 +1,7 @@
 module.exports = {
   collectCoverage: true,
   coverageProvider: 'v8',
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.js'],
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
@@ -21,7 +22,10 @@ module.exports = {
     '^.+\\.(js|jsx|ts|tsx)$': [
       'babel-jest',
       {
-        presets: ['@babel/preset-env', '@babel/preset-react'],
+        presets: [
+          '@babel/preset-env',
+          ['@babel/preset-react', { runtime: 'automatic' }],
+        ],
       },
     ],
   },
