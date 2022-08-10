@@ -1,40 +1,25 @@
 {
-  "extends": [
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended",
-    "airbnb",
-    "plugin:react/jsx-runtime"
-  ],
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2022
   },
+  "extends": ["plugin:react/recommended", "airbnb", "airbnb/hooks"],
   "rules": {
     "react/prop-types": "error",
     "react/require-default-props": "off",
-    "semi": "off",
-    "implicit-arrow-linebreak": "off",
-    "comma-dangle": "off",
-    "function-paren-newline": "off",
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     ],
+    "semi": [2, "never"],
     // prevent form control sibiling error
     "jsx-a11y/label-has-associated-control": [
       "error",
       {
         "required": {
-          "some": [
-            "nesting",
-            "id"
-          ]
+          "some": ["nesting", "id"]
         }
       }
     ],
@@ -42,34 +27,21 @@
       "error",
       {
         "required": {
-          "some": [
-            "nesting",
-            "id"
-          ]
+          "some": ["nesting", "id"]
         }
       }
     ]
   },
   "overrides": [
     {
-      "files": [
-        "**/__test__/**",
-        "**/__mocks/**"
-      ],
-      "plugins": [
-        "testing-library",
-        "jest"
-      ],
-      "extends": [
-        "plugin:testing-library/react",
-        "plugin:jest/recommended"
-      ],
-      "rules": {
-        "jest/prefer-expect-assertions": "off"
-      }
+      "files": ["**/__test__/**", "**/mocks/**"],
+      "plugins": ["testing-library", "jest"],
+      "extends": ["plugin:testing-library/react", "plugin:jest/recommended"],
+      "rules": { "jest/prefer-expect-assertions": "off" }
     }
   ],
   "env": {
+    "browser": true,
     "jest": true
   }
 }
