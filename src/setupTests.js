@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@testing-library/jest-dom'
-import { server } from './__mocks__/server'
+import { server } from './mocks/server'
 
 beforeAll(() => server.listen())
 
