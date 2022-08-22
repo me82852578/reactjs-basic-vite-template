@@ -1,3 +1,5 @@
+import React from 'react'
+
 import PropTypes from 'prop-types'
 import CardHeader from './CardHeader'
 import styles from './index.module.scss'
