@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+
+import { ReactComponent as ReactIcon } from '@/assets/react.svg'
 
 function App() {
   const [result, setResult] = useState({})
@@ -18,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      <ReactIcon />
       <h3>{result}</h3>
     </div>
   )
